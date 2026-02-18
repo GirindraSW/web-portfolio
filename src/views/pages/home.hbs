@@ -1,0 +1,90 @@
+﻿<section class="hero-section py-5 py-lg-6">
+  <div class="container">
+    <div class="row align-items-center g-4 g-lg-5">
+      <div class="col-lg-5 text-center text-lg-start">
+        <img
+          src="/img/profile.svg"
+          alt="Profile photo"
+          class="img-fluid profile-photo shadow-sm"
+        />
+      </div>
+      <div class="col-lg-7">
+        <h1 class="display-5 fw-bold mb-2">Hi, I'm {{name}} <span class="wave">&#128075;</span></h1>
+        <p class="text-primary fw-semibold mb-2">{{subtitle}}</p>
+        <p class="text-muted mb-4 hero-desc">{{description}}</p>
+
+        <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
+          <span class="meta-pill">
+            <i class="fa-solid fa-location-dot me-2 text-danger"></i>{{location}}
+          </span>
+          <span class="meta-pill status-pill">
+            <i class="fa-solid fa-circle dot me-2"></i>Available for new projects
+          </span>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-dark px-4" href="{{whatsappLink}}" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp me-2"></i>Let's Talk
+          </a>
+          <a class="btn btn-outline-dark px-4" href="{{cvLink}}" download>
+            <i class="fa-solid fa-download me-2"></i>Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tech-stack" class="py-5 section-surface">
+  <div class="container">
+    <h2 class="h3 fw-bold mb-4">Tech Stack</h2>
+    <div class="row g-3">
+      {{#each techStack}}
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="stack-card">
+          <i class="{{this.icon}} me-2"></i>{{this.label}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="h3 fw-bold mb-4">Projects</h2>
+    <div class="row g-4">
+      {{#each projects}}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm project-card">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 card-title mb-2">{{this.name}}</h3>
+            <p class="card-text text-muted">{{this.description}}</p>
+            <div class="d-flex flex-wrap gap-2 mt-2 mb-4">
+              {{#each this.tech}}
+              <span class="badge text-bg-light border">{{this}}</span>
+              {{/each}}
+            </div>
+            <a href="/projects/{{this.slug}}" class="btn btn-sm btn-outline-dark mt-auto">Detail</a>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="py-5 section-surface">
+  <div class="container">
+    <h2 class="h3 fw-bold mb-4">Experience</h2>
+    <div class="timeline">
+      {{#each experiences}}
+      <article class="timeline-item">
+        <h3 class="h5 mb-1">{{this.role}}</h3>
+        <p class="mb-1 fw-semibold">{{this.company}}</p>
+        <p class="mb-0 text-muted">{{this.duration}}</p>
+      </article>
+      {{/each}}
+    </div>
+  </div>
+</section>

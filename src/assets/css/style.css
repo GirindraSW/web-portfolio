@@ -1,0 +1,115 @@
+﻿:root {
+  --bg-soft: #f8f9fa;
+  --text-main: #212529;
+  --text-subtle: #6c757d;
+  --brand: #0d6efd;
+  --border-soft: #e9ecef;
+}
+
+body {
+  font-family: "Segoe UI", "Inter", sans-serif;
+  color: var(--text-main);
+  background-color: #ffffff;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: #111;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+}
+
+.hero-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 28px;
+  border: 1px solid var(--border-soft);
+}
+
+.hero-desc {
+  max-width: 56ch;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.status-pill .dot {
+  color: #20c997;
+  font-size: 0.6rem;
+}
+
+.section-surface {
+  background: var(--bg-soft);
+}
+
+.stack-card {
+  height: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  background: #fff;
+  font-weight: 600;
+}
+
+.project-card {
+  border-radius: 16px;
+}
+
+.timeline {
+  border-left: 2px solid var(--border-soft);
+  padding-left: 1.2rem;
+}
+
+.timeline-item {
+  padding: 0.75rem 0 1.1rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  position: absolute;
+  left: -1.55rem;
+  top: 1rem;
+  background: #111;
+}
+
+.social-links a {
+  color: var(--text-main);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    min-height: auto;
+  }
+
+  .profile-photo {
+    max-width: 280px;
+  }
+}
