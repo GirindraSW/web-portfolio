@@ -1,6 +1,0 @@
-﻿CURRICULUM VITAE
-
-Name: Girindra Sulistiyo
-Role: Full-Stack Developer
-
-Replace this placeholder file with your real CV (PDF recommended).
